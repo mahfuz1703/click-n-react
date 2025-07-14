@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+}
+
+.studentSection{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.presentButton {
+  background-color: #4CAF50; /* Green */
+}
+.absentButton {
+  background-color: #a93c35; /* Red */
+}
+.editButton {
+  background-color: #2196F3; /* Blue */
+}
+.deleteButton {
+  background-color: #d6180a; /* Red */
+}
+
+input {
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+h2 {
+  margin-top: 20px;
+  color: #333;
+}
+h1 {
+  color: #4CAF50;
+  margin-top: 20px;
+}
+
+.allStudent {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.allStudent li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+.allStudent li:last-child {
+  border-bottom: none;
+}
+.allStudent span {
+  flex-grow: 1;
+  text-align: left;
+}
+
+
+.presentStudents {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.presentStudents li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+.presentStudents li:last-child {
+  border-bottom: none;
+}
+.presentStudents span {
+  flex-grow: 1;
+  text-align: left;
+}
+
+
+.absentStudents {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.absentStudents li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+.absentStudents li:last-child {
+  border-bottom: none;
+}
+.absentStudents span {
+  flex-grow: 1;
+  text-align: left;
+}
+
