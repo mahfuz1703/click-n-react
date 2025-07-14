@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.notesTItle{
+  list-style: none;
+  padding: 0;
+  margin: 10px;
+  align-items: center;
+}
+
+.noteTitleField{
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  font-size: large;
+  border-radius: 5px;
+}
+
+.noteSubmitButton{
+  padding: 12px 20px;
+  font-size: large;
+  background-color: #09c635;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.notesTItle input[type="checkbox"] {
+  margin-right: 10px;
+}
+.notesTItle span {
+  margin-right: 10px;
+}
+.notesTItle button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: medium;
+  background-color: #f44336;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.notesTItle button:hover {
+  background-color: #d32f2f;
+}
