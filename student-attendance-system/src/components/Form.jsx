@@ -1,17 +1,21 @@
-function Form(props) {
+import {useContext} from 'react';
+import {StudentContext} from '../contexts/Student'
+
+function Form() {
+    const studentCtx = useContext(StudentContext);
     // Function to handle the creation of a new student
     const createStudentHandler = (event) => {
         event.preventDefault();
 
-        if (props.studentName) {
+        if (studentCtx.studentName) {
             const newStudent = {
                 id: Date.now(),
-                name: props.studentName,
+                name: studentCtx.studentName,
                 isPresent: undefined
             }
 
-            props.setStudentList([newStudent, ...props.studentList])
-            props.setStudentName('');
+            studentCtx.setStudentList([newStudent, ...studentCtx.studentList])
+            studentCtx.setStudentName('');
         } else {
             alert('Please enter a valid student name');
         }
@@ -21,27 +25,27 @@ function Form(props) {
     const updateStudentHandler = (event) => {
         event.preventDefault();
 
-        if (props.studentName && props.editableStudent) {
-            const updatedSetudentList = props.studentList.map((student) => {
-                if (student.id === props.editableStudent.id) {
-                    return { ...student, name: props.studentName };
+        if (studentCtx.studentName && studentCtx.editableStudent) {
+            const updatedSetudentList = studentCtx.studentList.map((student) => {
+                if (student.id === studentCtx.editableStudent.id) {
+                    return { ...student, name: studentCtx.studentName };
                 }
                 return student;
             })
-            props.setStudentList(updatedSetudentList);
-            props.setStudentName('');
-            props.setEditableStudent(null);
-            props.setEditMode(false);
+            studentCtx.setStudentList(updatedSetudentList);
+            studentCtx.setStudentName('');
+            studentCtx.setEditableStudent(null);
+            studentCtx.setEditMode(false);
         } else {
             alert('Please enter a valid student name');
         }
     }
     return (
         <div>
-            <form action="" className='studentForm' onSubmit={props.editMode ? updateStudentHandler : createStudentHandler}>
-                <input type='text' name='' id='' placeholder='Enter a student name' value={props.studentName} onChange={(event) => props.setStudentName(event.target.value)}></input>
+            <form action="" className='studentForm' onSubmit={studentCtx.editMode ? updateStudentHandler : createStudentHandler}>
+                <input type='text' name='' id='' placeholder='Enter a student name' value={studentCtx.studentName} onChange={(event) => studentCtx.setStudentName(event.target.value)}></input>
                 <button className='presentButton' type='submit'>
-                    {props.editMode ? 'Update Student' : 'Add Student'}
+                    {studentCtx.editMode ? 'Update Student' : 'Add Student'}
                 </button>
             </form>
         </div>
